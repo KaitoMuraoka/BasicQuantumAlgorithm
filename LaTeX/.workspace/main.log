@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2022.7.30)  15 NOV 2022 11:32
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2022.7.30)  15 NOV 2022 16:21
 entering extended mode
  restricted \write18 enabled.
 **main.tex
@@ -392,9 +392,13 @@ Package nag Warning: Environment eqnarray is obsolete.
 Package nag Warning: Environment eqnarray is obsolete. 
 (nag)                Use amsmath's align instead on input line 67.
 
-Package plautopatch Info: No additional packages loaded on input line 82.
 
-Package nag Warning: 2 complaints in total.
+Package nag Warning: Environment eqnarray is obsolete. 
+(nag)                Use amsmath's align instead on input line 87.
+
+Package plautopatch Info: No additional packages loaded on input line 108.
+
+Package nag Warning: 3 complaints in total.
 
 [2] (./main.aux) ) 
 Here is how much of TeX's memory you used:
@@ -406,10 +410,10 @@ Here is how much of TeX's memory you used:
  929 hyphenation exceptions out of 8191
  78i,12n,78p,871b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (2 pages, 5680 bytes).
+Output written on main.dvi (2 pages, 8164 bytes).
 
 
 main.dvi -> main.pdf
 [1][2]
-70349 bytes written
+79641 bytes written
 
