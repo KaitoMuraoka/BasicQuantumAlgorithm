@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2022.7.30)  15 NOV 2022 09:48
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2022.7.30)  15 NOV 2022 11:32
 entering extended mode
  restricted \write18 enabled.
 **main.tex
@@ -359,56 +359,57 @@ LaTeX Font Info:    Font shape `JY1/gt/bx/n' in size <12> not available
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 12.0pt on input line 23.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 10.0pt on input line 26.
+(Font)              scaled to size 10.0pt on input line 28.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 10.0pt on input line 26.
+(Font)              scaled to size 10.0pt on input line 28.
 LaTeX Font Info:    Font shape `JT1/gt/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 26.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 10.0pt on input line 26.
+(Font)              scaled to size 10.0pt on input line 28.
 LaTeX Font Info:    Font shape `JY1/gt/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 26.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 10.0pt on input line 26.
+(Font)              scaled to size 10.0pt on input line 28.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 26.
+(Font)              <10> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 26.
+(Font)              <7> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 26.
+(Font)              <5> on input line 29.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 7.0pt on input line 26.
+(Font)              scaled to size 7.0pt on input line 29.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.0pt on input line 26.
+(Font)              scaled to size 5.0pt on input line 29.
 
 
 Package nag Warning: Environment eqnarray is obsolete. 
-(nag)                Use amsmath's align instead on input line 28.
-
-
-Package nag Warning: Environment eqnarray is obsolete. 
-(nag)                Use amsmath's align instead on input line 42.
-
-Package plautopatch Info: No additional packages loaded on input line 62.
-
-Package nag Warning: 2 complaints in total.
+(nag)                Use amsmath's align instead on input line 39.
 
 [1
 
-] (./main.aux) ) 
+]
+
+Package nag Warning: Environment eqnarray is obsolete. 
+(nag)                Use amsmath's align instead on input line 67.
+
+Package plautopatch Info: No additional packages loaded on input line 82.
+
+Package nag Warning: 2 complaints in total.
+
+[2] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 5839 strings out of 478739
- 124099 string characters out of 5858778
- 431399 words of memory out of 5000000
- 24189 multiletter control sequences out of 15000+600000
+ 5840 strings out of 478739
+ 124117 string characters out of 5858778
+ 432407 words of memory out of 5000000
+ 24190 multiletter control sequences out of 15000+600000
  530648 words of font info for 97 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  78i,12n,78p,871b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (1 page, 2404 bytes).
+Output written on main.dvi (2 pages, 5680 bytes).
 
 
 main.dvi -> main.pdf
-[1]
-31206 bytes written
+[1][2]
+70349 bytes written
 
