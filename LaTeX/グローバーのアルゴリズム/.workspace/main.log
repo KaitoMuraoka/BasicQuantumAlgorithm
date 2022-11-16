@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2022.7.30)  17 NOV 2022 00:44
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2022.7.30)  17 NOV 2022 01:53
 entering extended mode
  restricted \write18 enabled.
 **main.tex
@@ -326,41 +326,59 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 8.0pt on input line 17.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 6.0pt on input line 17.
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 14.0pt on input line 20.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 14.0pt on input line 20.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 19.
+(Font)              scaled to size 14.0pt on input line 20.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 19.
-LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 19.
+(Font)              scaled to size 14.0pt on input line 20.
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 20.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `JT1/gt/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 19.
+LaTeX Font Info:    Font shape `JT1/gt/bx/n' in size <14> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 20.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 19.
-LaTeX Font Info:    Font shape `JY1/gt/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 19.
+(Font)              scaled to size 14.0pt on input line 20.
+LaTeX Font Info:    Font shape `JY1/gt/bx/n' in size <14> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 20.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 19.
-Package plautopatch Info: No additional packages loaded on input line 21.
+(Font)              scaled to size 14.0pt on input line 20.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 21.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 21.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 21.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 7.0pt on input line 21.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 5.0pt on input line 21.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 28.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [1
+
+]
+Package plautopatch Info: No additional packages loaded on input line 54.
 
 No complaints by nag.
-[1
-
-] (./main.aux) ) 
+[2] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 5807 strings out of 478739
- 123711 string characters out of 5858778
- 423398 words of memory out of 5000000
- 24165 multiletter control sequences out of 15000+600000
- 505367 words of font info for 76 fonts, out of 8000000 for 9000
+ 5867 strings out of 478739
+ 125019 string characters out of 5858778
+ 431398 words of memory out of 5000000
+ 24214 multiletter control sequences out of 15000+600000
+ 518327 words of font info for 90 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 78i,6n,78p,871b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,18n,78p,871b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (1 page, 980 bytes).
+Output written on main.dvi (2 pages, 4388 bytes).
 
 
 main.dvi -> main.pdf
-[1]
-18170 bytes written
+[1][2]
+50362 bytes written
 
