@@ -6,7 +6,18 @@
 \usepackage{graphicx}
 \usepackage{bxtexlogo}
 \usepackage{braket}
-\usepackage{amsmath}
+% \usepackage{amsmath}
+
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{siunitx}
+\usepackage{indentfirst}
+\usepackage{here}
+\usepackage{physics}
+\usepackage{amsmath,amssymb}
+% 図形
+\usepackage{tikz}
+\usepackage{url}
 
 \title{グローバーのアルゴリズム}
 
@@ -76,4 +87,159 @@
     \end{equation}
     のように計算できる。
 
+    最後に$\ket{s}$を対称軸にした反転操作$U_s$を定義する。
+    \begin{equation}
+        \begin{split}
+            U_s &= 2 \ket{s}\bra{s} - I = H^{\otimes n}(2 \ket{0 \cdots 0}\bra{0 \cdots 0} - I)H^{\otimes n}
+        \end{split}
+    \end{equation}
+
+
+    \begin{equation}
+        \left\{
+            \begin{array}{l}
+                U_s \ket{x} = 2 \bra{s} x \ket{s} - \ket{x} = \frac{2}{\sqrt{2^n}} \ket{x} \\
+                U_s \ket{s} = 2 \bra{s} s \ket{s} - \ket{s} = \ket{s}
+            \end{array}
+        \right.
+    \end{equation}
+
+
+    式(4)より、$U_s$を作用させると、
+
+    \begin{equation}
+    \begin{split}
+            U_s \ket{s} - \frac{2}{\sqrt{2^n}} U_s \ket{w} &= \ket{s} - \frac{2}{\sqrt{2^n}} \left( \frac{2}{\sqrt{2^n}} \ket{s} - \ket{w} \right) \\
+        &= \frac{2^n - 4}{2^n} \ket{s} + \frac{2}{\sqrt{2^n}} \ket{w} \\
+        &= \frac{2^n - 4}{2^n \sqrt{2^n}} \sum^{2^n - 1}_{x = 0, w \neq w} \ket{x} + \left( \frac{2^n - 4}{2^n \sqrt{2^n}} + \frac{2}{\sqrt{2^n}} \right) \ket{w} \\
+        &= \frac{2^n - 4}{2^n \sqrt{2^n}} \sum^{2^n - 1}_{x = 0, x \neq w} \ket{x} + \frac{3 \cdot 2^n - 4}{2^n \sqrt{2^n}} \ket{w}
+    \end{split}
+    \end{equation}
+    ように計算できる。
+
+    $\ket{s}$の時の状態では、$\ket{w}$を測定すると、確率は$\frac{1}{2^n}$となる。式(2.7)から確率が上昇していることがわかる。この確率を増幅させる操作のことを、振幅増幅と呼ぶ。グローバーのアルゴリズムは、この振幅増幅を複数回行うことにより、$\ket{w}$の確率を1に近づける。
+
+
+    \section{図を使用しての説明}
+$\ket{w}$に直行するベクトル$\ket{w^{\perp}}$を用いた平面を考えると、以下のような状態が得られる。
+$$
+    \ket{w} = \frac{1}{\sqrt{N - M}} \sum^{2^n - 1}_{x = 0, w \neq 0} \ket{x}
+$$
+$$
+    \ket{w^{\perp}} = \frac{1}{\sqrt{M}} \ket{w}
+$$
+全ての状態の重ね合せ状態$\ket{s}$は次のように表すことができるので、2次元平面ベクトルであることがわかる。
+\begin{equation}
+    \ket{s} = \sqrt{\frac{N - M}{N}}\ket{w^{\perp}} + \sqrt{\frac{M}{N}}\ket{w}
+\end{equation}
+
+全ての状態の重ね合わせ状態$\ket{s}$は次のように表せるので、この2次元平面内ベクトルであることがわかる。
+式(3.1)より、$\cos{\frac{\theta}{2}} = \sqrt{\frac{N - M}{N}}, \sin{\frac{\theta}{2}} = \sqrt{\frac{M}{N}}$を満たす角$\theta$を用いれば、
+\begin{equation}
+    \ket{s} = \cos{\frac{\theta}{2}}\ket{w^{\perp}} + \sin{\frac{\theta}{2}}\ket{w}
+\end{equation}
+と表すことができる。これを図示すると、図1のようになる。
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \draw[->,>=stealth,semithick] (-0.5,0)--(4,0)node[above]{$\ket{w^{\perp}}$}; %x軸
+        \draw[->,>=stealth,semithick] (0,-0.5)--(0,3.5)node[right]{$\ket{w}$}; %y軸
+        \draw (0,0)node[below left]{O}; %原点
+        \draw[->] (0,0)--(3, 1.5)node[right]{$\ket{s}$};
+        \draw [-](1,0) arc (0:20:1.4);
+        \coordinate (thrta_0) at (1,0) node at (thrta_0) [above right] {$\theta / 2$};
+    \end{tikzpicture}
+    \caption{全ての状態の重ね合わせ状態$\ket{s}$}
+    \label{fig:rootate}
+\end{figure}
+
+次に、$\ket{s}$に$U_w$をかけることにより、$\ket{w^{\perp}}$を軸に反転すると、図2のようになる。
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \draw[->,>=stealth,semithick] (-0.5,0)--(4,0)node[above]{$\ket{w^{\perp}}$}; %x軸
+        \draw[->,>=stealth,semithick] (0,-0.5)--(0,3.5)node[right]{$\ket{w}$}; %y軸
+        \draw (0,0)node[below left]{O}; %原点
+        \draw[->, dotted] (0,0)--(3, 1.5)node[right]{$\ket{s}$};
+        \coordinate (thrta_0) at (1,0) node at (thrta_0) [above right] {$\theta / 2$};
+        \draw [-](1,0) arc (0:20:1.4);
+        
+        \draw[->] (0,0)--(3, -1.5)node[right]{$U_w \ket{s}$};
+        \coordinate (thrta_1) at (1,0) node at (thrta_0) [below right] {$\theta / 2$};
+        \draw [-](1,0) arc (0:-20:1.4);
+    \end{tikzpicture}
+    \caption{$\ket{s}$に$U_w$を作用}
+    \label{fig:rootate}
+\end{figure}
+
+最後に、$U_s$を作用させることにより、$\ket{s}$を軸に$U_w \ket{s}$を反転させると、図3のようになる。
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \draw[->,>=stealth,semithick] (-0.5,0)--(4,0)node[above]{$\ket{w^{\perp}}$}; %x軸
+        \draw[->,>=stealth,semithick] (0,-0.5)--(0,3.5)node[right]{$\ket{w}$}; %y軸
+        \draw (0,0)node[below left]{O}; %原点
+        % \draw[->, dotted] (0,0)--(3, 1.5)node[right]{$\ket{s}$};
+        % \coordinate (thrta_0) at (1,0) node at (thrta_0) [above right] {$\theta / 2$};
+        % \draw [-](1,0) arc (0:20:1.4);
+        
+        \draw[->, dotted] (0,0)--(3, -1.5)node[right]{$U_w \ket{s}$};
+        \coordinate (thrta_1) at (1,0) node at (thrta_0) [below right] {$\theta / 2$};
+        \draw [-](1,0) arc (0:-20:1.4);
+        
+        \draw[->] (0,0)--(2.25, 2.6)node[right]{$U_s U_w \ket{s}$};
+        \coordinate (thrta_0) at (1,0) node at (thrta_1) [above right] {$\frac{3}{2}\theta$};
+        \draw [-](1,0) arc (0:37.5:1.4);
+    \end{tikzpicture}
+    \caption{$U_w\ket{s}$に$U_s$を作用}
+    \label{fig:rootate}
+\end{figure}
+
+以上より、平面ベクトル内で、角度$\theta$だけの回転が行われ、$\ket{w}$を測定する確率が上昇することがわかる。
+
+
+\section{最適な$k$の見積もり}
+最後に、$U_sU_w$を作用させる回数$k$について、最適な回数が幾つなのか調べる。
+式(3.2)より、グローバーのアルゴリズムを1回施すと、
+\begin{equation}
+    U_sU_w\ket{s} = \cos{\frac{3}{2}\theta}\ket{w^{\perp}} + \sin{\frac{3}{2}\theta}\ket{w}
+\end{equation}
+となる。これを$k$回施すと、
+\begin{equation}
+    (U_sU_w)^k\ket{s} = \cos{\frac{2k+1}{2}\theta} \ket{w^{\perp}} + \sin{\frac{2k+1}{2}\theta} \ket{w}
+\end{equation}
+となる。これを用いて、最終的に$\ket{w}$の確率振幅を1にしたいので、
+
+\begin{equation}
+    \begin{aligned}
+    \sin{\frac{2k + 1}{2} \theta} = 1\\
+    \Leftrightarrow \frac{2k + 1}{2} \theta = \frac{\pi}{2}\\
+    \therefore k = \frac{\pi}{2 \theta}
+    \end{aligned}
+\end{equation}
+
+となる。よって、$\frac{2k + 1}{2}\theta$が$\frac{\pi}{2}$にもっとも近くなるときは、
+\begin{equation}
+    R = ClosestInteger(\frac{\pi}{2\theta} - \frac{1}{2})
+\end{equation}
+の時である。ここで、$ClosestInteger(...)$は$...$に最も近い整数を表す。
+
+最後に、Rの上限を評価する。$\theta > 0$について成り立つ式、
+\begin{equation}
+    \frac{\theta}{2} \geq \sin{\frac{\theta}{2}} = \sqrt{\frac{M}{N}}
+\end{equation}
+を使うと、以下のように表すことができる。
+\begin{equation}
+    R \leq \left( \frac{\pi}{2\theta} - \frac{1}{2} \right) + 1 = \frac{\pi}{2\theta} + \frac{1}{2} \leq \frac{\pi}{4}\sqrt{\frac{N}{M}} + \frac{1}{2}
+\end{equation}
+つまり、Rは$O(\sqrt{N/M})$である。これにより、グローバーのアルゴリズムが$O(\sqrt{N})$で動作することがわかる。
+
+
+
+ \begin{thebibliography}{2}
+ \bibitem{QuantumDojo}\url{https://dojo.qulacs.org/ja/latest/notebooks/8.2_Grovers_algorithm.html}
+ \bibitem{IBMbook}秀和システム：IBM Quantumで学ぶ量子コンピュータ
+ \end{thebibliography}
 \end{document}
