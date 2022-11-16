@@ -49,6 +49,31 @@
 
     のように計算できる。
 
+    次に解に対する反転操作を作用させる。入力$\ket{x}$に対して$x$が解なら、$-1$を掛けて位相を反転し、解でないなら$1$を掛ける。つまり、ゲートを以下のように定義する。
 
+    \begin{equation}
+        \left\{
+        \begin{array}{l}
+        U_w \ket{x} = \ket{x} (x \neq w) \\
+    U_w \ket{w} = - \ket{w}
+        \end{array}
+    \right.
+    \end{equation}
+    
+    \begin{equation}
+        U_w = I -2 \sum_{w \in \text{解}} \ket{w}\bra{w}
+    \end{equation}
+    
+    
+    これを用いると、$\ket{s}$は、
+    \begin{equation}
+    \begin{split}
+        U_w\ket{s} &= \frac{1}{\sqrt{2^n}} \sum^{2^n - 1} _{x = 0, x \neq w} U_w \ket{x} + \frac{1}{\sqrt{2^n}}U_w \ket{x}\\
+        &= \frac{1}{\sqrt{2^n}}\sum^{2^n - 1}_{x = 0, x \neq w} \ket{x} - \frac{1}{\sqrt{2^n}}\ket{w}\\
+        &= \left( \ket{s} - \frac{1}{\sqrt{2^n}}\ket{w} \right) - \frac{1}{\sqrt{2^n}}\ket{w} \\
+        U_w\ket{s} &= \ket{s} - \frac{2}{\sqrt{2^n}} \ket{w} \label{eq:f-inf}
+    \end{split}
+    \end{equation}
+    のように計算できる。
 
 \end{document}
