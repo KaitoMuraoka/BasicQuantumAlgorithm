@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2022.7.30)  17 NOV 2022 11:04
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2022.7.30)  20 NOV 2022 23:29
 entering extended mode
  restricted \write18 enabled.
 **main.tex
@@ -851,5 +851,5 @@ dvipdfmx:warning: Object @figure.1 already defined.
 dvipdfmx:warning: Object @figure.2 already defined.
 dvipdfmx:warning: Object @figure.3 already defined.
 ][5]
-95068 bytes written
+94978 bytes written
 
